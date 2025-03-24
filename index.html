@@ -1,923 +1,284 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Namrata Shirsat</title>
-<link rel="stylesheet" href="https://assets.livecareer.co.uk/blobcontent/lcintl/styles/fontawesome-kit/css/all.min.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<title>Namrata Shirsat Resume </title>
+<!-- Bootstrap -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<!--	inline css-->
 <style>
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    vertical-align: baseline;
-    background: transparent;
-}
 body {
-    background: #8B8B8B;
-    line-height: 1;
-    text-align: left;
-    min-height: 100vh;
-    padding: 0 20px;
-    margin: 0;
-}
-.skn-mng3 table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-size: inherit;
-    color: inherit;
-    width: 100%
-}
-/*START Image treatment for LI*/
-.skn-mng3 ul {
-    list-style-type: disc;
-    padding: 0
-}
-.skn-mng3 li {
-    list-style-type: disc;
-    margin: 0 0 0 10px;
-    padding: 0
-}
-.skn-mng3 ul li {
-    margin: 0 0 0 14px
-}
-.skn-mng3 .address li, .skn-mng3 .address ul {
-    display: inline;
-    margin: 0;
-    padding: 0;
-    list-style: none
-}
-.skn-mng3 .address li:before {
-    content: "\2022\0020";
-    vertical-align: bottom
-}
-.skn-mng3 .address li.first:before {
-    content: ""
-}
-.skn-mng3 .excSmry ul, .skn-mng3 .excExp ul {
-    margin-top: 5px
-}
-.skn-mng3 .disp-inblk {
-    display: inline-block
-}
-/*END Image treatment for LI*/
-
-.skn-mng3 .sprtr + .sprtr, .skn-mng3 .educsprtr + .educsprtr {
-    display: none
-}
-.skn-mng3 span.paddedline {
-    display: block
-}
-.skn-mng3 .jobtitle, .skn-mng3 .degree, .skn-mng3 .txt-bold {
-    font-weight: bold
-}
-.skn-mng3 .table_wrapper {
-    width: 100%;
-    margin-top: 0
-}
-.skn-mng3 .sprtr {
-    margin: 0 5px;
-    display: inline-block
-}
-.skn-mng3 .txtItl {
-    font-style: italic
-}
-.skn-mng3 span.dates_wrapper {
-    display: block;
-    float: left
-}
-.skn-mng3 .hiltSec {
-    width: 100%
-}
-.skn-mng3 .hiltSec ul li {
-    margin-left: 5%
-}
-.skn-mng3 .social .sprtr {
-    padding-right: 2px
-}
-.skn-mng3 .social .disp-inblk:last-child .sprtr {
-    display: none
-}
-.skn-mng3 .parlrColmn {
-    width: 100%;
-    display: table
-}
-.skn-mng3 .flt-right {
-    float: right
-}
-/*Dyanmic BG*/
-.skn-mng3.dynamicbg {
-    position: relative
-}
-.skn-mng3.dynamicbg:before {
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-position: 0 top;
-    background-size: contain;
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%
-}
-.skn-mng3 .dynamicIcon {
-    margin: auto
-}
-.skn-mng3 .dynamicIcon svg, .skn-mng3 .dynamicIcon img {
-    fill: #fff;
-    height: calc(100% - 10%);
-    width: calc(100% - 10%);
-    margin: auto;
-    vertical-align: middle
-}
-.skn-mng3 .dynamicIcon > div {
-    height: 50px
-}
-.skn-mng3 .dynamicIcon img {
-    width: calc(100% - 33%)
-}
-.skn-mng3 .dynamicIcon svg.admin_a *, .skn-mng3 .dynamicIcon svg.healthcare_a * {
-    stroke: transparent
-}
-.skn-mng3 .dynamicIcon svg .st2 {
-    fill: inherit
-}
-.skn-mng3 .dynamicIcon svg.ret_a {
-    fill: #fff!important
-}
-.skn-mng3 {
-    color: #4a4a4a;
-    background-color: #fff!important
-}
-.skn-mng3 .SECTION_CNTC, .skn-mng3 .firstsection {
-    border: none;
-    padding: 0
-}
-.skn-mng3 .name {
-    color: #4a4a4a;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 17px;
-    padding: 0;
-    text-transform: uppercase;
-    text-align: center
-}
-.skn-mng3 .sectiontitle, .skn-mng3 .resumeTitle, .skn-mng3 .execRsmTitle {
-    font-weight: 600;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    background: #FFF;
-    padding: 0 10px 0 0
-}
-.skn-mng3 .profTitle {
-    text-align: center
-}
-.skn-mng3 .paragraph {
-    position: relative
-}
-.skn-mng3 .heading, .skn-mng3 .resumeTitle, .skn-mng3 .execRsmTitle {
-    clear: both;
-    position: relative
-}
-.skn-mng3 .address {
-    position: relative;
-    text-align: center;
-    font-size: 0.7em;
-    line-height: 1.25em;
-    margin-top: 11px
-}
-.skn-mng3 .address2 {
-    position: relative;
-    text-align: left;
-    font-size: 0.7em;
-    line-height: 1.25em
-}
-.skn-mng3 table.twocol td {
-    width: 50%
-}
-.skn-mng3 table.skills th, .skn-mng3 table.skills td {
-    width: 20%;
-    text-align: center
-}
-.skn-mng3 table.skills th {
-    text-decoration: underline
-}
-.skn-mng3 table.skills .skillname, .skn-mng3 table.skills .skillrating {
-    text-align: left;
-    width: 35%
-}
-.skn-mng3 table.skills .skillrating {
-    width: 20%
-}
-.skn-mng3 table.skills .skillyears, .skn-mng3 table.skills .skilllast {
-    width: 19%
-}
-.skn-mng3 table.skills .pad1 {
-    width: 5%
-}
-.skn-mng3 table.skills .pad2, .skn-mng3 table.skills .pad3 {
-    width: 1%
-}
-.skn-mng3 .wrd-brk {
-    word-break: break-word
-}
-/*New logic for infographic*/
-.skn-mng3 .lang-sec .infobarpara, .skn-mng3 .skli-sec .infobarpara, .skn-mng3 .lang-sec .infotilepara, .skn-mng3 .skli-sec .infotilepara, .skn-mng3 .lang-sec .singlecolumn, .skn-mng3 .skli-sec .singlecolumn {
-    display: none
-}
-.skn-mng3 .lang-sec.infobarsec .infobarpara, .skn-mng3 .skli-sec.infobarsec .infobarpara, .skn-mng3 .lang-sec.infotilesec .infotilepara, .skn-mng3 .skli-sec.infotilesec .infotilepara {
-    display: block
-}
-/*Infographic Common*/
-.skn-mng3 .lang-sec, .skn-mng3 .skli-sec {
-    font-size: 0
-}
-.skn-mng3 .lang-sec .field *, .skn-mng3 .lang-sec .nativeLangPara .field, .skn-mng3 .skli-sec .field * {
-    display: inline;
-    word-wrap: break-word
-}
-.skn-mng3 .lang-sec .paragraph, .skn-mng3 .skli-sec .paragraph {
-    display: inline-block;
-    vertical-align: top;
-    padding-bottom: 5px;
-    margin-top: 0
-}
-.skn-mng3 .lang-sec .paragraph:nth-last-child(1), .skn-mng3 .lang-sec .paragraph:nth-last-child(2), .skn-mng3 .skli-sec .paragraph:nth-last-child(1), .skn-mng3 .skli-sec .paragraph:nth-last-child(2) {
-    padding-bottom: 0
-}
-.skn-mng3 .lang-sec .singlecolumn, .skn-mng3 .skli-sec .singlecolumn {
-    margin-left: 0!important;
-    position: relative;
-    padding-left: 0!important
-}
-.skn-mng3 .lang-sec .singlecolumn, .skn-mng3 .lang-sec .maincolumn, .skn-mng3 .skli-sec .singlecolumn, .skn-mng3 .skli-sec .maincolumn {
-    width: 100%
-}
-.skn-mng3 .lang-sec .sectiontitle, .skn-mng3 .skli-sec .sectiontitle {
-    max-width: 100%
-}
-.skn-mng3 .lang-sec .heading, .skn-mng3 .skli-sec .heading {
-    word-wrap: break-word
-}
-/*Infographic Bar*/
-.skn-mng3 .infobarsec .rating-bar {
-    background: #d5d6d6;
-    width: 100%;
-    clear: both;
-    margin-top: 3px;
-    position: relative;
-    page-break-inside: avoid
-}
-.skn-mng3 .infobarsec .inner-rating {
-    background-color: #333;
-    height: 4px;
-    position: relative;
-    width: 60%
-}
-/*Infographic Tile*/
-.skn-mng3 .sliced-rect {
-    height: 6px;
-    width: 100%;
-    line-height: 0px;
-    margin-top: 3px;
-    clear: both
-}
-.skn-mng3 .sliced-rect .sliced-rect-tile {
-    height: 100%;
-    background-color: #d5d6d6;
-    float: left;
-    margin-right: 3px
-}
-.skn-mng3 .sliced-rect .sliced-rect-tile:last-child {
-    margin-right: 0
-}
-/*Rectangular Rating Blocks*/
-.skn-mng3 .hide-bar .rating-bar, .skn-mng3 .hide-bar .sliced-rect, .skn-mng3 .hide-colon .colon {
-    display: none!important
-}
-/*FIX for FORCEFULLY making left margin ZERO for CL*/
-.skn-mng3 .sectionCL .paragraph {
-    margin-top: 0!important
-}
-.skn-mng3 .displayNoneThisField {
-    display: none
-}/* Keep this class always at bottom */
-.skn-mng3 .dynamicIcon img {
-    background-color: #fff!important
-}
-/*Button style*/
-.skn-mng3 .section.btnlnk {
-    text-align: center;
-    margin-top: 7px;
-    font-size: 0;
-    line-height: normal
-}
-.skn-mng3 .btnlnk .paragraph {
-    display: inline-block;
-    padding-left: 10px;
-    margin: 0;
-    line-height: 15px
-}
-.skn-mng3 .btnlnk .paragraph:first-child {
-    padding-left: 0
-}
-.skn-mng3 .txtlnk {
-    display: none
-}
-.skn-mng3:not(.show-btn) .btnlnk {
-    display: none
-}
-/*Button SVG*/
-.skn-mng3 .btnlnk a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    ;
-    text-decoration: none;
-    position: relative;
-    text-align: center
-}
-.skn-mng3 .btnlnk a:before {
-    content: '';
-    background: #000;
-    border-radius: 15px;
-    left: 0;
-    opacity: .1;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 1
-}
-.skn-mng3 .btnlnk a:after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    background: #fff;
-    border-radius: 15px
-}
-.skn-mng3 .btnlnk svg {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    position: relative;
-    z-index: 3
-}
-.skn-mng3 .btnlnk svg text {
-    text-anchor: middle;
-    font-weight: bold;
-    fill: #000;
-    text-align: center;
-    letter-spacing: 0.38px
-}
-/*Personal details section*/
-.skn-mng3 .pdet-sec .singlecolumn {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap
-}
-.skn-mng3 .details-wrap {
-    width: 49%
-}
-/*For Extra Space Before Colon*/
-.skn-mng3 .beforecolonspace {
-    display: none !important
-}
-.skn-mng3.show-colon-space .beforecolonspace {
-    display: inline !important
-}
-.skn-mng3, .skn-mng3 table {
-    line-height: 17px;
-}
-.skn-mng3.pagesize {
-    width: 787px
-}
-.skn-mng3.fontsize, .skn-mng3 .lang-sec.infobarsec .paragraph *, .skn-mng3 .lang-sec.infotilesec .paragraph *, .skn-mng3 .skli-sec .paragraph * {
-    font-size: 12px
-}
-.skn-mng3.fontface {
     font-family: Palatino Linotype;
-    margin: auto;
+    box-sizing: border-box;
+    background: #7D7D7D;
+    padding: 16px;
+    font-size: 18px;
 }
-.skn-mng3.vmargins {
-    padding-top: 37px;
-    padding-bottom: 37px
+.font-weight-500 {
+    font-weight: 500;
 }
-.skn-mng3.hmargins {
-    padding-left: 52px;
-    padding-right: 52px
+.text-primary {
+    color: #144181 !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
 }
-.skn-mng3 .section {
-    margin-top: 22px;
-    position: relative;
-}
-.skn-mng3 .sectiontitle, .skn-mng3 .resumeTitle, .skn-mng3 .execRsmTitle {
-    font-size: 14px;
-    color: #144181;
-    line-height: 16px
-}
-.skn-mng3 .profTitle {
-    font-size: 16px;
-    line-height: 30px;
-    padding-bottom: 7px
-}
-.skn-mng3 .heading, .skn-mng3 .resumeTitle, .skn-mng3 .execRsmTitle {
-    margin-bottom: 5px
-}
-.skn-mng3 .heading:before {
-    border-top: 1px solid #bcbfc3;
-    content: "";
-    display: block;
+hr {
     height: 1px;
-    position: absolute;
-    top: 50%;
     width: 100%;
-    z-index: 1
+    position: relative;
+    background-color: gray;
 }
-.skn-mng3 .paragraph {
-    margin-top: 15px
+p {
+    margin: 0;
 }
-.skn-mng3 .name-sec, .skn-mng3 .SECTION_CNTC, .skn-mng3 .firstparagraph {
-    margin-top: 0
+#name {
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 }
-.skn-mng3 .singlecolumn, .skn-mng3 .maincolumn {
-    margin-left: 0px
-}
-.skn-mng3 table.skills td {
-    padding-top: 7px
-}
-/*
-.skn-mng3 .name {
-    font-size: 39px;
-    color: #144181;
-    line-height: 57px
-}
-*/
-.skn-mng3 .address {
-    font-size: 14px;
-    line-height: 16px;
-    margin-top: 7px
-}
-.skn-mng3 .address li:before {
-    font-size: 31px;
-    color: #44b3e6;
-    margin-right: -3px
-}
-.skn-mng3 span.dates_wrapper {
-    width: 291px
-}
-.skn-mng3 .parlrColmn .singlecolumn {
-    margin-left: 291px;
-    width: auto
-}
-.skn-mng3 .parlrColmn .singlecolumn ul li {
-    padding-bottom: 2px
-}
-.skn-mng3 .lang-sec .heading, .skn-mng3 .info-sec .heading {
-    font-size: 14px
-}
-.skn-mng3.dynamicbg:before {
-    background-image: url({$DYBG});
-    width: 892px
-}
-.skn-mng3 .section.btnlnk, .skn-mng3 .btnlnk a {
-height: {
-$BTHT
-}
-px
-}
-.skn-mng3 .SECTION_CNTC + .section:not(.btnlnk) {
-    margin-top: 22px
-}
-/*Button*/
-.skn-mng3.show-btn-gap .name-sec {
-    padding-top: 18px
-}
-.skn-mng3.show-btn-gap .SECTION_CNTC {
-    padding-bottom: 18px
-}
-.skn-mng3 .btnlnk a:before {
-    background: #144181
-}
-.skn-mng3 .btnlnk svg text {
-    fill: #144181
-}
-.skn-mng3 .btnlnk .paragraph {
-    width: 175px;
-    height: 27px
-}
-.skn-mng3 .dynamicIcon, .skn-mng3 .nameLogo svg {
-    width: 75px;
-    height: 75px
-}
-.skn-mng3 .nameLogo svg > circle {
-    stroke: #144181!important
-}
-.skn-mng3 .nameLogo svg > text {
-    fill: #144181
-}
-.skn-mng3 .dynamicIcon svg {
-    fill: #144181
-}
-.skn-mng3 .dynamicIcon svg * {
-    stroke: #144181
-}
-/*Infographic Common*/
-.skn-mng3 .lang-sec, .skn-mng3 .skli-sec {
-    padding-left: 0px
-}
-.skn-mng3 .lang-sec .paragraph, .skn-mng3 .skli-sec .paragraph {
-    width: 380px
-}
-.skn-mng3 .infobarsec .inner-rating, .skn-mng3 .sliced-rect .sliced-rect-tile.ratvfill {
-    background-color: #144181
-}
-.skn-mng3 .lang-sec .heading, .skn-mng3 .skli-sec .heading, .skn-mng3 .skli-sec .title-edit, .skn-mng3 .lang-sec .title-edit {
-    margin-left: -0px
-}
-.skn-mng3 .lang-sec .nativeLangPara {
-    width: 787px;
-    max-width: 787px
-}
-.skn-mng3 .lang-sec .paragraph.para_odd, .skn-mng3 .skli-sec .paragraph.para_odd {
-    margin-right: 22px
-}
-/*Finalize Fixes*/
-.skn-mng3 .lang-sec .sortableInner .sortable-item, .skn-mng3 .skli-sec .sortableInner .sortable-item {
-    display: inline-block
-}
-.skn-mng3 .sortable-item .lang-sec.infobarsec {
-    margin-left: 0
-}
-.skn-mng3 .lang-sec .sortable-item .paragraph, .skn-mng3 .skli-sec .sortable-item .paragraph {
-    padding-bottom: 5px
-}
-.skn-mng3 .lang-sec .sortable-item:nth-last-child(1) .paragraph, .skn-mng3 .lang-sec .sortable-item:nth-last-child(2) .paragraph, .skn-mng3 .skli-sec .sortable-item:nth-last-child(1) .paragraph, .skn-mng3 .skli-sec .sortable-item:nth-last-child(2) .paragraph {
-    padding-bottom: 0
-}
-/*Finalize Fixes*/
-.skn-mng3 .info-sec .sortableInner .sortable-item .paragraph, .skn-mng3 .lang-sec .sortableInner .sortable-item + .sortable-item .paragraph {
-    max-width: 380px;
-    vertical-align: top
-}
-.skn-mng3 .SECTION_LNGG .sortableInner .sortable-item {
-    display: inline-block;
-    vertical-align: top
-}
-.skn-mng3 .SECTION_LNGG .nativeLangPara {
-    width: 100%!important;
-    max-width: 100%!important;
-}
-.skn-mng3 .SECTION_LNGG .para_odd {
-    margin-right: 15px
-}
-.skn-mng3 .SECTION_LNGG .nativeLangPara .singlecolumn {
-    width: 787px!important;
-    max-width: 787px!important
-}
-.skn-mng3 .SECTION_LNGG .firstparagraph.para_odd {
-    max-width: 380px!important
-}
-/*For Button*/
-.skn-mng3 .section.btnlnk + .section, .skn-mng3 .sortable-item.data-BUTN + .sortable-item .section {
-    margin-top: 11px
-}
-.skn-mng3.RNA.show-btn .name-contact + div .sortable-item:first-child .section, .skn-mng3.RNA.show-btn-gap .name-contact + div .sortable-item:first-child .section {
-    margin-top: 0 !important
-}
-.skn-mng3.RNA.show-btn .name-contact, .skn-mng3.RNA.show-btn-gap .name-contact {
-    margin-bottom: 11px
-}
-/*FIX for Re-calculating width of singlecolumn for CL*/
-.skn-mng3 .sectionCL {
-    border: none;
-    margin-top: none
-}
-.skn-mng3 .sectionCL .singlecolumn {
-    margin-left: 0!important;
-    width: 100%
-}
-.skn-mng3 .address2 {
-    font-size: 14px;
-    line-height: 16px;
-}
-/*Rectangular Rating Blocks*/
-.skn-mng3 .paragraph .sliced-rect .sliced-rect-tile.ratvfill {
-    background-color: #144181
+#page1, #page2 {
+    padding: 20px
 }
 </style>
 </head>
-<body style="align-items: center; margin: 0">
-<div class="body-resume">
-  <div class="document doc-root fontsize fontface vmargins hmargins undefined pagesize skn-mng3 MNG3  LUK" id="content">
-    <div id="page1"  style="padding: 30px 50px;">
-      <div class="sortable-item section-container name-contact">
-        <div class="document-tool sec-tool" style="right: -54px;"> </div>
-        <div id="SECTION_NAME74278251-e65f-4687-93f4-90ba28c4fc86" class="section name-sec SECTION_NAME firstsection     " data-section-cd="NAME">
-          <div class=" doc-item">
-            <div class="">
-              <div class="">
-                <div id="PARAGRAPH_NAME_3834d144-9cef-9947-da52-85b476646215" class="paragraph PARAGRAPH_NAME firstparagraph  ">
-                  <div>
-                    <div class="monogram dynamicIcon" dependency="MURL" style="display: none;">
-                      <div id="FIELD_MURL"></div>
-                    </div>
-                    <div class="name"> <span id="FIELD_FNAM">Namrata </span><span dependency="FNAM+MNAM+LNAM" style="display: none;"></span> <span dependency="MNAM" style="display: none;"><span id="FIELD_MNAM"></span></span> <span id="FIELD_LNAM">shirsat</span> </div>
-                    <div class="profTitle" dependency="DCTL" style="display: none;"><span id="FIELD_DCTL"></span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<body class="m-auto text-center align-items-center container-fluid">
+<div class="container p-3 bg-white" id="content">
+  <div id="page1"> 
+    <!--	adding name and address-->
+    <div class="container name p-0 text-black" id="info">
+      <h2  class="text-uppercase text-center font-weight-500" id="name">Namrata shirsat</h2>
+      <p class="contianer-fluid p-0 m-0 text-center">Room no- C493, Sector 2, Airoli,Navi Mumbai, 400708</p>
+      <p class="contianer-fluid p-0 m-0 text-center"><a href="mailto:namrata.shirsaat@gmail.com" id="email" >namrata.shirsaat@gmail.com</a> | <a href="tel:+91 9004978232" >9004978232</a> </p>
+      <p class="contianer-fluid m-0 p-0 text-center" id="github" ><a href="https://github.com/Namrata-1487" target="_blank">https://github.com/Namrata-1487</a></p>
+    </div>
+    <br>
+    <!--	adding summary-->
+    <div class="container-fluid text-left" >
+      <div class="row align-items-center">
+        <div class="sectiontitle text-primary p-0" id="summary">Summary</div>
+        <div class="col p-2">
+          <hr class="hr p-0 m-0">
         </div>
-        <div id="SECTION_CNTC785eb6d3-9934-4216-91ca-8af0f0c7ee05" class="section SECTION_CNTC      " data-section-cd="CNTC">
-          <div class=" doc-item">
-            <div class="">
-              <div class="">
-                <div id="PARAGRAPH_CNTC_bb589dc4-8de5-aa31-1b4c-0883d29f218d" class="paragraph PARAGRAPH_CNTC firstparagraph  ">
-                  <div class="clearfix doc-item">
-                    <div class="address"> <span id="FIELD_EMAI">namrata.shirsaat@gmail.com</span><span dependency="EMAI"><span class="sprtr" dependency="CPHN|STRT|CITY"> | </span><span class="sprtr" dependency="STAT|ZIPC|ADDR"> | </span></span> <span id="FIELD_CPHN">9004978232</span><span dependency="CPHN"><span class="sprtr" dependency="ADDR|STRT|CITY|STAT|ZIPC"> | </span></span> <span id="FIELD_STRT"></span><span dependency="STRT" style="display: none;"><span dependency="CITY|STAT|ZIPC" style="display: none;">, </span></span> <span class="spaced" id="FIELD_CITY"></span><span dependency="CITY+STAT|ZIPC" style="display: none;">, </span> <span class="spaced" id="FIELD_STAT"></span><span dependency="STAT+ZIPC" style="display: none;"></span> <span class="spaced" id="FIELD_ZIPC"></span> <span id="FIELD_ADDR">Room no- C493, Sector 2, Airoli,Navi Mumbai, 400708</span> <span dependency="ADDR|STRT|CITY|STAT|ZIPC|HPHN|CPHN|EMAI"><span class="sprtr" dependency="DOB1|NTLY|VSTA|DRIV|MSTA|GNDR|WEB1|SOCL|FTHR|ADIF" style="display: none;">|</span></span> <span dependency="DOB1|DRIV|NTLY|VSTA|MSTA|GNDR|WEB1|SOCL|FTHR|ADIF" style="display: none;"> <span dependency="DOB1" class="disp-inblk" style="display: none;"> <span class="txt-bold"><span class="xslt_static_change" id="DOCDATAINFO_DOB1">Date of birth</span><span>: </span></span><span id="FIELD_DOB1"></span> </span> <span class="sprtr" dependency="DOB1" style="display: none;"><span dependency="NTLY|VSTA|DRIV|MSTA|GNDR|WEB1|SOCL|FTHR|ADIF" style="display: none;"> | </span></span> <span dependency="NTLY" class="disp-inblk" style="display: none;"> <span class="txt-bold"><span class="xslt_static_change" id="DOCDATAINFO_NTLY">Nationality</span><span>: </span></span><span id="FIELD_NTLY"></span> </span> <span class="sprtr" dependency="NTLY" style="display: none;"><span dependency="VSTA|DRIV|MSTA|GNDR|WEB1|SOCL|FTHR|ADIF" style="display: none;"> | </span></span> <span dependency="VSTA" class="disp-inblk" style="display: none;"> <span class="txt-bold"><span class="xslt_static_change" id="DOCDATAINFO_VSTA">Visa Status</span><span>: </span></span><span id="FIELD_VSTA"></span> </span> <span class="sprtr" dependency="VSTA" style="display: none;"><span dependency="DRIV|MSTA|GNDR|WEB1|SOCL|FTHR|ADIF" style="display: none;"> | </span></span> <span dependency="DRIV" class="disp-inblk" style="display: none;"> <span class="txt-bold"><span class="xslt_static_change" id="DOCDATAINFO_DRIV">Permit</span><span>: </span></span><span id="FIELD_DRIV"></span> </span> <span class="sprtr" dependency="DRIV" style="display: none;"><span dependency="MSTA|GNDR|WEB1|SOCL|FTHR|ADIF" style="display: none;"> | </span></span> <span dependency="MSTA" class="disp-inblk" style="display: none;"> <span class="txt-bold"><span class="xslt_static_change" id="DOCDATAINFO_MSTA">Marital status</span><span>: </span></span><span id="FIELD_MSTA"></span> </span> <span class="sprtr" dependency="MSTA" style="display: none;"><span dependency="GNDR|WEB1|SOCL|FTHR|ADIF" style="display: none;"> | </span></span> <span dependency="GNDR" class="disp-inblk" style="display: none;"> <span class="xslt_static_change  txt-bold" id="DOCDATAINFO_GNDR">Gender</span><span class="txt-bold">: </span><span id="FIELD_GNDR"></span> </span> <span class="sprtr" dependency="GNDR" style="display: none;"><span dependency="WEB1|SOCL|FTHR|ADIF" style="display: none;"> | </span></span> <span dependency="WEB1" class="disp-inblk" style="display: none;"><span class="txt-bold"><span class="xslt_static_change txt-bold">Web</span><span>: </span></span><span class="wrd-brk" id="FIELD_WEB1"></span></span> <span class="sprtr" dependency="WEB1" style="display: none;"><span dependency="SOCL|FTHR|ADIF" style="display: none;"> | </span></span> <span class="social"> </span> <span class="sprtr" dependency="SOCL" style="display: none;"><span dependency="FTHR|ADIF" style="display: none;"> | </span></span> <span dependency="FTHR" class="disp-inblk" style="display: none;"> <span class="txt-bold"><span class="xslt_static_change" id="DOCDATAINFO_FTHR">Father’s/Mother’s name</span><span>: </span></span><span id="FIELD_FTHR"></span> </span> <span class="sprtr" dependency="FTHR+ADIF" style="display: none;"> | </span> <span dependency="ADIF" class="disp-inblk" style="display: none;"> <span class="txt-bold"><span class="xslt_static_change" id="DOCDATAINFO_ADIF">Additional information</span><span>: </span></span><span id="FIELD_ADIF"></span> </span> </span><br>
-                      <span><a href="https://github.com/Namrata-1487" target="_blank">https://github.com/Namrata-1487</a></span> </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div></div>
       </div>
-      <div class="parent-wrapper" >
-        <div data-react-beautiful-dnd-draggable="0" class="sortable-item section-container SortableItem-sibling data-SUMM">
-          <div id="SECTION_SUMMcc92e34b-2c64-44eb-9096-8215828afd8b" class="section SECTION_SUMM    has-title   " data-section-cd="SUMM">
-            <div class=" doc-item">
-              <div class="heading">
-                <div class="sectiontitle" id="SECTIONNAME_SUMM">Summary</div>
-              </div>
-              <div class="">
-                <div class="">
-                  <div id="PARAGRAPH_SUMM_bd71432a-7442-15eb-5b1d-a0f85df45fd9" class="paragraph PARAGRAPH_SUMM firstparagraph  ">
-                    <div class="clearfix doc-item">
-                      <div class="singlecolumn" id="FIELD_FRFM">
-                        <p>Experienced in building responsive and visually appealing user interfaces. Possesses knack for translating design concepts into interactive web experiences using HTML, CSS, and JavaScript. Capable of collaborating seamlessly with designers and Front-end developers to deliver high-quality projects. And Productive QA associate with history of excelling at discovering flaws and imperfections. Demonstrates accuracy, thoroughness and orderliness. Produces consistently error-free work.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div data-react-beautiful-dnd-draggable="0" class="sortable-item section-container SortableItem-sibling data-EXPR">
-          <div id="SECTION_EXPR0cecbb01-9aaa-41ba-8b31-9fe793d2cd22" class="section SECTION_EXPR   multi-para has-title   " data-section-cd="EXPR">
-            <div class=" doc-item">
-              <div class="heading">
-                <div class="sectiontitle" id="SECTIONNAME_EXPR">Experience</div>
-              </div>
-              <div class="">
-                <div id="CONTAINER_0cecbb01-9aaa-41ba-8b31-9fe793d2cd22" class="sortableInner">
-                  <div data-react-beautiful-dnd-draggable="0" class="sortable-item paragraph-container SortableItem-sibling">
-                    <div id="PARAGRAPH_EXPR_4a513724-1f99-ef8c-0134-41f85e47ba9a" class="paragraph parlrColmn PARAGRAPH_EXPR firstparagraph  ">
-                      <div class="clearfix doc-item"> <span class="dates_wrapper"> <span class="paddedline" dependency="COMP|JCIT|JSTA|JCNT"> <span class="companyname" id="FIELD_COMP">Accenture solutions pvt ltd </span><span dependency="COMP"><span dependency="JCIT|JSTA|JCNT"> | </span></span><span class="joblocation jobcity" id="FIELD_JCIT">Navi Mumbai</span><span dependency="JCIT+JSTA|JCNT" style="display: none;">, </span><span class="joblocation jobstate" id="FIELD_JSTA"></span><span dependency="JSTA+JCNT" style="display: none;">, </span><span class="joblocation jobcountry" id="FIELD_JCNT"></span> </span> <span class="paddedline" dependency="JTIT"> <span class="jobtitle" id="FIELD_JTIT">HTML QA Asssociate</span> </span> <span class="paddedline txtItl" dependency="JSTD|EDDT"> <span class="jobdates" id="FIELD_JSTD" format="%m/%Y">08/2024</span> <span dependency="JSTD+EDDT"> - </span> <span class="jobdates" id="FIELD_EDDT" format="%m/%Y">Current</span> </span> </span>
-                        <div class="singlecolumn"> <span class="jobline" id="FIELD_JDES">
-                          <ul>
-                            <li>Ensuring product quality by implementing and monitoring quality control processes, conducting inspections/audits, and collaborating with teams to identify and resolve issues, ultimately upholding quality standards and compliance.</li>
-                            <li>Tested and ensured quality of HTML-based web applications.</li>
-                            <li>Collaborated with suppliers and external partners to address quality concerns, ensuring product standards.</li>
-                            <li>Participated in regular quality review meetings, presenting findings and recommendations for continuous improvement.</li>
-                          </ul>
-                          </span> </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-react-beautiful-dnd-draggable="0" class="sortable-item paragraph-container SortableItem-sibling">
-                    <div id="PARAGRAPH_EXPR_ae352dec-ef7a-0066-9ace-da4a41c9af1c" class="paragraph parlrColmn PARAGRAPH_EXPR  ">
-                      <div class="clearfix doc-item"> <span class="dates_wrapper"> <span class="paddedline" dependency="COMP|JCIT|JSTA|JCNT"> <span class="companyname" id="FIELD_COMP">SIT computers</span><span dependency="COMP"><span dependency="JCIT|JSTA|JCNT" style="display: none;"> | </span></span><span class="joblocation jobcity" id="FIELD_JCIT"></span><span dependency="JCIT+JSTA|JCNT" style="display: none;">, </span><span class="joblocation jobstate" id="FIELD_JSTA"></span><span dependency="JSTA+JCNT" style="display: none;">, </span><span class="joblocation jobcountry" id="FIELD_JCNT"></span> </span> <span class="paddedline" dependency="JTIT"> <span class="jobtitle" id="FIELD_JTIT">Software Trainer </span> </span> <span class="paddedline txtItl" dependency="JSTD|EDDT"> <span class="jobdates" id="FIELD_JSTD" format="%m/%Y">01/2024</span> <span dependency="JSTD+EDDT"> - </span> <span class="jobdates" id="FIELD_EDDT" format="%m/%Y">05/2024</span> </span> </span>
-                        <div class="singlecolumn"> <span class="jobline" id="FIELD_JDES">
-                          <ul>
-                            <li>Lead instructional courses focusing on AUTOCAD, Solidwork and manual testing software.</li>
-                          </ul>
-                          </span> </div>
-                      </div>
-                      <div class="doc-overlay para-overlay" style="left:-54px; right: -54px;"><span class="badge badge-primary badge-edit"></span><span>&nbsp;</span></div>
-                    </div>
-                  </div>
-                  <div data-react-beautiful-dnd-draggable="0" class="sortable-item paragraph-container SortableItem-sibling">
-                    <div id="PARAGRAPH_EXPR_5a5cc4d7-cddf-c890-4d66-aab11cef3ce5" class="paragraph parlrColmn PARAGRAPH_EXPR  ">
-                      <div class="clearfix doc-item"> <span class="dates_wrapper"> <span class="paddedline" dependency="COMP|JCIT|JSTA|JCNT"> <span class="companyname" id="FIELD_COMP">Green point global pvt ltd</span><span dependency="COMP"><span dependency="JCIT|JSTA|JCNT" > | </span></span><span class="joblocation jobcity" id="FIELD_JCIT">Navi Mumbai </span><span dependency="JCIT+JSTA|JCNT" style="display: none;">, </span><span class="joblocation jobstate" id="FIELD_JSTA"></span><span dependency="JSTA+JCNT" style="display: none;">, </span><span class="joblocation jobcountry" id="FIELD_JCNT"></span> </span> <span class="paddedline" dependency="JTIT"> <span class="jobtitle" id="FIELD_JTIT">Front-End Developer</span> </span> <span class="paddedline txtItl" dependency="JSTD|EDDT"> <span class="jobdates" id="FIELD_JSTD" format="%m/%Y">09/2023</span> <span dependency="JSTD+EDDT"> - </span> <span class="jobdates" id="FIELD_EDDT" format="%m/%Y">01/2024</span> </span> </span>
-                        <div class="singlecolumn"> <span class="jobline" id="FIELD_JDES">
-                          <ul>
-                            <li>Participated in agile development processes, contributing to sprint planning, stand-ups, and retrospectives.</li>
-                            <li>Implemented responsive web design principles to guarantee optimal viewing across various devices.</li>
-                            <li>Optimised website performance by incorporating responsive design techniques, enhancing accessibility on various devices.</li>
-                            <li>Maintained and updated website content, ensuring accurate and current information was displayed to users.</li>
-                            <li>Developed and implemented website layouts utilising HTML5 and CSS3, improving user experience and interface design.</li>
-                          </ul>
-                          </span> </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-react-beautiful-dnd-draggable="0" class="sortable-item paragraph-container SortableItem-sibling">
-                    <div id="PARAGRAPH_EXPR_c85e94d6-4875-f791-65a5-3b30965a7438" class="paragraph parlrColmn PARAGRAPH_EXPR  ">
-                      <div class="clearfix doc-item"> <span class="dates_wrapper"> <span class="paddedline" dependency="COMP|JCIT|JSTA|JCNT"> <span class="companyname" id="FIELD_COMP">Green point global pvt ltd </span><span dependency="COMP"><span dependency="JCIT|JSTA|JCNT"> | </span></span><span class="joblocation jobcity" id="FIELD_JCIT">Navi Mumbai </span><span dependency="JCIT+JSTA|JCNT" style="display: none;">, </span><span class="joblocation jobstate" id="FIELD_JSTA"></span><span dependency="JSTA+JCNT" style="display: none;">, </span><span class="joblocation jobcountry" id="FIELD_JCNT"></span> </span> <span class="paddedline" dependency="JTIT"> <span class="jobtitle" id="FIELD_JTIT">Software Tester</span> </span> <span class="paddedline txtItl" dependency="JSTD|EDDT"> <span class="jobdates" id="FIELD_JSTD" format="%m/%Y">09/2022</span> <span dependency="JSTD+EDDT"> - </span> <span class="jobdates" id="FIELD_EDDT" format="%m/%Y">01/2024</span> </span> </span>
-                        <div class="singlecolumn"> <span class="jobline" id="FIELD_JDES">
-                          <ul>
-                            <li>Conducted comprehensive manual testing on software applications to identify bugs and performance issues.</li>
-                            <li>Facilitated user acceptance testing UAT sessions with clients to validate product functionality against requirements.</li>
-                            <li>Performed system, integration and regression testing on software to define specifications, expose defects and gauge functionality.</li>
-                            <li>Analysed user requirements to develop appropriate testing strategies for each project.</li>
-                          </ul>
-                          </span> </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div data-react-beautiful-dnd-draggable="0" class="sortable-item section-container SortableItem-sibling data-HILT">
-          <div id="SECTION_HILT0c5be648-ad19-4373-a404-0202ff111c7a" class="section hiltSec SECTION_HILT    has-title   " data-section-cd="HILT">
-            <div class=" doc-item">
-              <div class="heading">
-                <div class="sectiontitle" id="SECTIONNAME_HILT">Skills</div>
-              </div>
-              <div class="">
-                <div class="">
-                  <div id="PARAGRAPH_HILT_7227b253-8384-8a9f-18cb-2e313836495a" class="paragraph PARAGRAPH_HILT firstparagraph  ">
-                    <div class="clearfix doc-item">
-                      <div class="singlecolumn maincolumn">
-                        <table class="twocol">
-                          <tbody>
-                            <tr>
-                              <td class="twocol_1" id="FIELD_SKC1"><ul>
-                                  <li>Veeva Vault</li>
-                                  <li>Understanding the SDLC and STLC</li>
-                                  <li>Risk management proficiency</li>
-                                  <li>Agile methodology experience</li>
-                                  <li>QA software usage</li>
-                                  <li>Bug tracking tools mastery (WorkFront, JIRA, Microsoft azure)</li>
-                                  <li>Basic SQL</li>
-                                  <li>Basic graphic designing</li>
-                                  <li>CSS3 proficiency</li>
-                                  <li>HTML5 mastery</li>
-                                  <li>Cross-Browser compatibility</li>
-                                </ul></td>
-                              <td class="twocol_2" id="FIELD_SKC2"><ul>
-                                  <li>Responsive web design</li>
-                                  <li>Agile and scrum frameworks</li>
-                                  <li>JavaScript, html, css familiarity</li>
-                                  <li>Print design</li>
-                                  <li>UI design</li>
-                                  <li>WordPress customisation</li>
-                                  <li>Figma to HTML</li>
-                                  <li>Agile methodology familiarity</li>
-                                  <li>Front-End frameworks, i.e., bootstrap</li>
-                                  <li>Basic java</li>
-                                </ul></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
+      <div class="row p-2">
+        <p>Experienced in building responsive and visually appealing user interfaces. Possesses knack for translating design concepts into interactive web experiences using HTML, CSS, and JavaScript. Capable of collaborating seamlessly with designers and Front-end developers to deliver high-quality projects. And Productive QA associate with history of excelling at discovering flaws and imperfections. Demonstrates accuracy, thoroughness and orderliness. Produces consistently error-free work.</p>
       </div>
     </div>
-    <div id="page2" style="padding:30px 50px;">
-      <div class="project">
-        <div class="heading">
-          <div class="sectiontitle" id="SECTIONNAME_HILT">Projects</div>
+    <!--	adding experience -->
+    <div class="container-fluid text-left" >
+      <div class="row align-items-center">
+        <div class="sectiontitle text-primary p-0" id="Experience">Experience</div>
+        <div class="col p-2">
+          <hr class="hr p-0 m-0">
         </div>
-        <ul style="padding: 0 8px;">
-          <li><b>Resume Builder (HTML &amp; CSS)</b></li>
-          <a href="https://namratashirsatresume.netlify.app/" style="padding:0 15px"  target="_blank"><i class="fa-solid fa-paperclip"></i> View Project</a>
-          <p style="padding:0 15px">Developed a fully responsive and visually appealing resume webpage from scratch using HTML and CSS. Designed a clean, structured layout with sections for personal details, skills, experience, and projects. Ensured cross-browser compatibility and optimized the design for both desktop and mobile viewing.</p>
-          <br>
-          <li><b>Responsive Landing Page (HTML &amp; CSS)</b></li>
-          <a href="https://webzaa-landing-page.netlify.app/" style="padding:0 15px" target="_blank"><i class="fa-solid fa-paperclip"></i> View Project</a>
-          <p style="padding:0 15px">Designed and developed a modern, fully responsive landing page from scratch using HTML and CSS. Implemented a clean UI with intuitive navigation, engaging visuals, and a structured layout. Ensured cross-browser compatibility and optimized performance for seamless user experience on both desktop and mobile devices.</p>
-          <br>
-          <li><b>Custom Video Player (HTML, CSS, JavaScript)</b></li>
-          <a href="https://customise-vide-player.netlify.app/" style="padding:0 15px" target="_blank"><i class="fa-solid fa-paperclip"></i> View Project</a>
-          <p style="padding:0 15px">Built a partially functional and interactive video player from scratch using HTML, CSS, and JavaScript. Implemented features such as play/pause, volume control, progress bar, fullscreen mode, and custom styling for a seamless user experience. Ensured responsiveness and cross-browser compatibility for optimal performance on various devices.</p>
-          <br>
-          <li><b>Circular Clock Timer (HTML, CSS, JavaScript)</b></li>
-          <a href="https://digital-clock-trial.netlify.app/" style="padding:0 15px" target="_blank"><i class="fa-solid fa-paperclip"></i> View Project</a>
-          <p style="padding:0 15px">Developed an interactive circular clock timer using HTML, CSS, and JavaScript. The UI features animated circular progress indicators for hours, minutes, and seconds, each represented by different colors. The timer dynamically updates in real-time, offering a visually appealing and modern clock design.</p>
-          <p style="padding:0 15px"><b>Key functionalities include:</b><br>
-            <i class="fa-solid fa-circle-check"></i> Smooth animations for progress tracking<br>
-            <i class="fa-solid fa-circle-check"></i> Customizable colors for each time unit<br>
-            <i class="fa-solid fa-circle-check"></i> Real-time updates using JavaScript</p>
-          <br>
-          <li><b>Palindrome Checker</b></li>
-          <a href="https://palindrome-project-practise.netlify.app/" style="padding:0 15px" target="_blank"><i class="fa-solid fa-paperclip"></i> View Project</a>
-          <p style="padding:0 15px">Developed a Palindrome Checker web application using HTML, CSS, and JavaScript. The tool allows users to input a word or phrase and determines whether it is a palindrome (reads the same forward and backward).</p>
-          <p style="padding:0 15px"><b>Key Features:</b><br>
-            <i class="fa-solid fa-circle-check"></i> Real-time palindrome validation with instant results<br>
-            <i class="fa-solid fa-circle-check"></i> Case-insensitive and space-agnostic checking<br>
-            <i class="fa-solid fa-circle-check"></i> User-friendly interface with interactive design <br>
-            <i class="fa-solid fa-circle-check"></i> Responsive layout for seamless usability across devices</p>
-        </ul>
       </div>
-      <div data-react-beautiful-dnd-draggable="0" class="sortable-item section-container SortableItem-sibling data-EDUC">
-        <div id="SECTION_EDUCab57c4d9-b165-4cd4-8a88-84e8b660b99f" class="section SECTION_EDUC   multi-para has-title   " data-section-cd="EDUC">
-          <div class=" doc-item">
-            <div class="heading">
-              <div class="sectiontitle" id="SECTIONNAME_EDUC">Education</div>
-            </div>
-            <div class="">
-              <div id="CONTAINER_ab57c4d9-b165-4cd4-8a88-84e8b660b99f" class="sortableInner">
-                <div data-react-beautiful-dnd-draggable="0" class="sortable-item paragraph-container SortableItem-sibling">
-                  <div id="PARAGRAPH_EDUC_95ec400c-1c04-5427-93e4-ade46be18e2b" class="paragraph PARAGRAPH_EDUC firstparagraph  ">
-                    <div class="clearfix doc-item">
-                      <div class="singlecolumn"> <span class="paddedline" dependency="SCHO|SCIT|SSTA|SCNT"> <span class="companyname" id="FIELD_SCHO">Terna Engineering College</span><span class="educsprtr" dependency="SCHO+SCIT|SSTA"> | </span><span class="educsprtr" dependency="SCHO+SCNT" style="display: none;"> | </span> <span class="joblocation jobcity" id="FIELD_SCIT">Navi Mumbai </span><span dependency="SCIT+SSTA|SCNT" style="display: none;">, </span> <span class="joblocation jobstate" id="FIELD_SSTA"></span><span dependency="SSTA+SCNT" style="display: none;">, </span> <span class="joblocation jobcountry" id="FIELD_SCNT"></span> </span> <span class="paddedline" dependency="STUY|DGRE|GRHN"> <span class="degree" id="FIELD_DGRE">Bachelor of Engineering</span><span dependency="DGRE+STUY"> in </span> <span class="programline" id="FIELD_STUY">Mechanical</span> <span dependency="GRHN" style="display: none;"><span dependency="DGRE|STUY"> - </span></span> <span id="FIELD_GRHN"></span> </span> <span class="paddedline txtItl" dependency="GRYR|GRED|GRST|GRIP"> <span class="xslt_static_change displayNoneThisField">Expected in </span><span id="FIELD_GRYR" format="%m/%Y">2019</span> <span id="FIELD_GRST" format="%m/%Y"></span> <span dependency="GRST+GRED" style="display: none;"> - </span> <span id="FIELD_GRED" format="%m/%Y"></span> <span dependency="GRED|GRST" style="display: none;"><span dependency="GRIP" style="display: none;"> - </span></span> <span id="FIELD_GRIP"></span> </span> <span class="paddedline" dependency="GRPA" style="display: none;"> <span dependency="GRPA" style="display: none;">GPA: </span><span id="FIELD_GRPA"></span><br dependency="GRPA" style="display: none;">
-                      </div>
-                    </div>
-                  </div>
-                  <div data-react-beautiful-dnd-draggable="0" class="sortable-item paragraph-container SortableItem-sibling">
-                    <div id="PARAGRAPH_EDUC_2753e90e-a9fa-c45d-118e-fec22dfde410" class="paragraph PARAGRAPH_EDUC  ">
-                      <div class="clearfix doc-item">
-                        <div class="singlecolumn"> <span class="paddedline" dependency="SCHO|SCIT|SSTA|SCNT"> <span class="companyname" id="FIELD_SCHO">Dnyansadhana college </span><span class="educsprtr" dependency="SCHO+SCIT|SSTA"> | </span><span class="educsprtr" dependency="SCHO+SCNT" style="display: none;"> | </span> <span class="joblocation jobcity" id="FIELD_SCIT">Thane</span><span dependency="SCIT+SSTA|SCNT" style="display: none;">, </span> <span class="joblocation jobstate" id="FIELD_SSTA"></span><span dependency="SSTA+SCNT" style="display: none;">, </span> <span class="joblocation jobcountry" id="FIELD_SCNT"></span> </span> <span class="paddedline" dependency="STUY|DGRE|GRHN"> <span class="degree" id="FIELD_DGRE">HSC</span><span dependency="DGRE+STUY"> in </span> <span class="programline" id="FIELD_STUY">Science</span> <span dependency="GRHN" style="display: none;"><span dependency="DGRE|STUY"> - </span></span> <span id="FIELD_GRHN"></span> </span> <span class="paddedline txtItl" dependency="GRYR|GRED|GRST|GRIP"> <span class="xslt_static_change displayNoneThisField">Expected in </span><span id="FIELD_GRYR" format="%m/%Y">2015</span> <span id="FIELD_GRST" format="%m/%Y"></span> <span dependency="GRST+GRED" style="display: none;"> - </span> <span id="FIELD_GRED" format="%m/%Y"></span> <span dependency="GRED|GRST" style="display: none;"><span dependency="GRIP" style="display: none;"> - </span></span> <span id="FIELD_GRIP"></span> </span> <span class="paddedline" dependency="GRPA" style="display: none;"> <span dependency="GRPA" style="display: none;">GPA: </span><span id="FIELD_GRPA"></span><br dependency="GRPA" style="display: none;">
-                          </span> <span id="FIELD_FRFM"></span> </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-react-beautiful-dnd-draggable="0" class="sortable-item paragraph-container SortableItem-sibling">
-                    <div id="PARAGRAPH_EDUC_86689f83-6d3e-4dbf-0ae8-8c7be3ebc526" class="paragraph PARAGRAPH_EDUC  ">
-                      <div class="clearfix doc-item">
-                        <div class="singlecolumn"> <span class="paddedline" dependency="SCHO|SCIT|SSTA|SCNT"> <span class="companyname" id="FIELD_SCHO">Shreeram Vidyalaya </span><span class="educsprtr" dependency="SCHO+SCIT|SSTA"> | </span><span class="educsprtr" dependency="SCHO+SCNT" style="display: none;"> | </span> <span class="joblocation jobcity" id="FIELD_SCIT">Airoli, Navi Mumbai</span><span dependency="SCIT+SSTA|SCNT" style="display: none;">, </span> <span class="joblocation jobstate" id="FIELD_SSTA"></span><span dependency="SSTA+SCNT" style="display: none;">, </span> <span class="joblocation jobcountry" id="FIELD_SCNT"></span> </span> <span class="paddedline" dependency="STUY|DGRE|GRHN"> <span class="degree" id="FIELD_DGRE">SSC</span><span dependency="DGRE+STUY"> in </span> <span class="programline" id="FIELD_STUY">Semi Medium</span> <span dependency="GRHN" style="display: none;"><span dependency="DGRE|STUY"> - </span></span> <span id="FIELD_GRHN"></span> </span> <span class="paddedline txtItl" dependency="GRYR|GRED|GRST|GRIP"> <span class="xslt_static_change displayNoneThisField">Expected in </span><span id="FIELD_GRYR" format="%m/%Y">2013</span> <span id="FIELD_GRST" format="%m/%Y"></span> <span dependency="GRST+GRED" style="display: none;"> - </span> <span id="FIELD_GRED" format="%m/%Y"></span> <span dependency="GRED|GRST" style="display: none;"><span dependency="GRIP" style="display: none;"> - </span></span> <span id="FIELD_GRIP"></span> </span> <span class="paddedline" dependency="GRPA" style="display: none;"> <span dependency="GRPA" style="display: none;">GPA: </span><span id="FIELD_GRPA"></span><br dependency="GRPA" style="display: none;">
-                          </span> <span id="FIELD_FRFM"></span> </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="row p-2 company" id="company1">
+        <div class="col-lg-3 col-12 p-0">
+          <p class="p-0 m-0" id="comapany_name">Accenture solutions pvt ltd | Mumbai</p>
+          <p class="p-0 m-0" id="designation"><b>HTML QA Asssociate</b></p>
+          <p class="p-0 m-0" id="period"><i>08/2024 - Current</i></p>
         </div>
-        <div data-react-beautiful-dnd-draggable="0" class="sortable-item section-container SortableItem-sibling data-CERT">
-          <div id="SECTION_CERTf289bfdf-2c4f-5696-e55c-6d3c3fc4ba1c" class="section SECTION_CERT    has-title   " data-section-cd="CERT">
-            <div class=" doc-item">
-              <div class="heading">
-                <div class="sectiontitle" id="SECTIONNAME_CERT">Certifications</div>
-              </div>
-              <div class="">
-                <div class="">
-                  <div id="PARAGRAPH_CERT_fbab9aad-9e6f-8886-6b3c-83f81503adb7" class="paragraph PARAGRAPH_CERT firstparagraph  ">
-                    <div class="clearfix doc-item">
-                      <div class="singlecolumn" id="FIELD_FRFM">
-                        <ul>
-                          <li>Completed frontend developer and responsive web developer course from FreeCode camp</li>
-                          <li>Award winner for the best employee of the month November</li>
-                          <li>completed manual and automation course from SIT computers</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="col-lg-9 col-12 px-lg-2 p-0">
+          <ul class="p-lg-0 px-3 m-0">
+            <li>Ensuring product quality by implementing and monitoring quality control processes, conducting inspections/audits, and collaborating with teams to identify and resolve issues, ultimately upholding quality standards and compliance.</li>
+            <li>Tested and ensured quality of HTML-based web applications.</li>
+            <li>Collaborated with suppliers and external partners to address quality concerns, ensuring product standards.</li>
+            <li>Participated in regular quality review meetings, presenting findings and recommendations for continuous improvement.</li>
+          </ul>
         </div>
-        <div data-react-beautiful-dnd-draggable="0" class="sortable-item section-container SortableItem-sibling data-CUST">
-          <div id="SECTION_CUST74684ac9-b075-d839-0082-dc8a7db376bd" class="section SECTION_CUST    has-title   " data-section-cd="CUST">
-            <div class=" doc-item">
-              <div class="heading">
-                <div class="sectiontitle" id="SECTIONNAME_CUST">Hobbies and interests</div>
-              </div>
-              <div class="">
-                <div class="">
-                  <div id="PARAGRAPH_CUST_1cc00f8a-1318-f349-7461-0e0d9f5ef2c8" class="paragraph PARAGRAPH_CUST firstparagraph  ">
-                    <div class="clearfix doc-item">
-                      <div class="singlecolumn" id="FIELD_FRFM">
-                        <ul>
-                          <li>Painting (specifically warli and cloth painting)</li>
-                          <li>Dancing</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
       </div>
-      <button id="download">Download as PDF</button>
+      <div class="row p-2 company" id="company2">
+        <div class="col-lg-3 col-12 px-0">
+          <p class="p-0 m-0" id="comapany_name">SIT computers | Navi Mumbai</p>
+          <p class="p-0 m-0" id="designation"><b>Software Trainer </b></p>
+          <p class="p-0 m-0" id="period"><i>01/2024 - 05/2024</i></p>
+        </div>
+        <div class="col-lg-9 col-12 px-lg-2 p-0">
+          <ul class="p-lg-0 px-3 m-0">
+            <li>Lead instructional courses focusing on AUTOCAD, Solidwork and manual testing software.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row p-2 company" id="company3">
+        <div class="col-lg-3 col-12 p-0">
+          <p class="p-0 m-0" id="comapany_name">Green point global pvt ltd | Navi Mumbai</p>
+          <p class="p-0 m-0" id="designation"><b>Front-End Developer</b></p>
+          <p class="p-0 m-0" id="period"><i>09/2023 - 01/2024</i></p>
+        </div>
+        <div class="col-lg-9 col-12 px-lg-2 p-0">
+          <ul class="p-lg-0 px-3 m-0">
+            <li>Participated in agile development processes, contributing to sprint planning, stand-ups, and retrospectives.</li>
+            <li>Implemented responsive web design principles to guarantee optimal viewing across various devices.</li>
+            <li>Optimised website performance by incorporating responsive design techniques, enhancing accessibility on various devices.</li>
+            <li>Maintained and updated website content, ensuring accurate and current information was displayed to users.</li>
+            <li>Developed and implemented website layouts utilising HTML5 and CSS3, improving user experience and interface design.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row p-2 company" id="company4">
+        <div class="col-lg-3 col-12 p-0">
+          <p class="p-0 m-0" id="comapany_name">Green point global pvt ltd | Navi Mumbai</p>
+          <p class="p-0 m-0" id="designation"><b>Software Tester</b></p>
+          <p class="p-0 m-0" id="period"><i>09/2023 - 01/2024</i></p>
+        </div>
+        <div class="col-lg-9 col-12 px-lg-2 p-0">
+          <ul class="p-lg-0 px-3 m-0">
+            <li>Conducted comprehensive manual testing on software applications to identify bugs and performance issues.</li>
+            <li>Facilitated user acceptance testing UAT sessions with clients to validate product functionality against requirements.</li>
+            <li>Performed system, integration and regression testing on software to define specifications, expose defects and gauge functionality.</li>
+            <li>Analysed user requirements to develop appropriate testing strategies for each project.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--	adding skills --><!---->
+    <div class="container-fluid text-left" >
+      <div class="row align-items-center">
+        <div class="sectiontitle text-primary p-0" id="Skills">Skills</div>
+        <div class="col p-2">
+          <hr class="hr p-0 m-0">
+        </div>
+      </div>
+      <div class="row p-lg-0 py-2">
+        <div class="col-lg-6 col-12 p-lg-3 p-0">
+          <ul class="px-4 m-0">
+            <li>Veeva Vault</li>
+            <li>ChatGPT</li>
+            <li>Agile and scrum frameworks</li>
+            <li>Understanding the SDLC and STLC</li>
+            <li>Risk management proficiency</li>
+            <li>Agile methodology experience</li>
+            <li>QA software usage</li>
+            <li>Bug tracking tools mastery (WorkFront, JIRA, Microsoft azure)</li>
+            <li>Print design</li>
+            <li>Basic SQL</li>
+            <li>Basic graphic designing</li>
+            <li>Agile methodology familiarity</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-12 p-lg-3 p-0">
+          <ul class="px-4 m-0">
+            <li>Responsive web design</li>
+            <li>BlackBox</li>
+            <li>JavaScript, html, css familiarity</li>
+            <li>CSS3 proficiency</li>
+            <li>HTML5 mastery</li>
+            <li>Cross-Browser compatibility</li>
+            <li>WordPress customisation</li>
+            <li>Figma to HTML</li>
+            <li>Front-End frameworks, i.e., bootstrap</li>
+            <li>Basic java</li>
+            <li>UI design</li>
+            <li>Basic knowledge of AI, Figma, Indesign, Photoshop</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
+  <div id="page2">
+    <!--	adding projects-->
+    <div class="container-fluid text-left" >
+      <div class="row align-items-center">
+        <div class="sectiontitle text-primary p-0" id="projects">Projects</div>
+        <div class="col p-2">
+          <hr class="hr p-0 m-0">
+        </div>
+      </div>
+      <!--  <div class="row px-3">-->
+      <ul class="p-lg-3 py-2 px-2 m-0">
+        <li><b>Resume Builder (HTML &amp; CSS)</b></li>
+        <a href="https://namratashirsatresume.netlify.app/"    target="_blank"><i class="fa-solid fa-paperclip"></i> View Project</a>
+        <p >Developed a fully responsive and visually appealing resume webpage from scratch using HTML and CSS. Designed a clean, structured layout with sections for personal details, skills, experience, and projects. Ensured cross-browser compatibility and optimized the design for both desktop and mobile viewing.</p>
+        <!--        <br>-->
+        <li><b>Responsive Landing Page (HTML &amp; CSS)</b></li>
+        <a href="https://webzaa-landing-page.netlify.app/"   target="_blank"><i class="fa-solid fa-paperclip"></i> View Project</a>
+        <p  >Designed and developed a modern, fully responsive landing page from scratch using HTML and CSS. Implemented a clean UI with intuitive navigation, engaging visuals, and a structured layout. Ensured cross-browser compatibility and optimized performance for seamless user experience on both desktop and mobile devices.</p>
+        <!--        <br>-->
+        <li><b>Custom Video Player (HTML, CSS, JavaScript)</b></li>
+        <a href="https://customise-vide-player.netlify.app/"   target="_blank"><i class="fa-solid fa-paperclip"></i> View Project</a>
+        <p  >Built a partially functional and interactive video player from scratch using HTML, CSS, and JavaScript. Implemented features such as play/pause, volume control, progress bar, fullscreen mode, and custom styling for a seamless user experience. Ensured responsiveness and cross-browser compatibility for optimal performance on various devices.</p>
+        <!--        <br>-->
+        <li><b>Circular Clock Timer (HTML, CSS, JavaScript)</b></li>
+        <a href="https://digital-clock-trial.netlify.app/"   target="_blank"><i class="fa-solid fa-paperclip"></i> View Project</a>
+        <p  >Developed an interactive circular clock timer using HTML, CSS, and JavaScript. The UI features animated circular progress indicators for hours, minutes, and seconds, each represented by different colors. The timer dynamically updates in real-time, offering a visually appealing and modern clock design.</p>
+        <p  ><b>Key functionalities include:</b><br>
+          <i class="fa-solid fa-circle-check"></i> Smooth animations for progress tracking<br>
+          <i class="fa-solid fa-circle-check"></i> Customizable colors for each time unit<br>
+          <i class="fa-solid fa-circle-check"></i> Real-time updates using JavaScript</p>
+        <!--        <br>-->
+        <li><b>Palindrome Checker</b></li>
+        <a href="https://palindrome-project-practise.netlify.app/"   target="_blank"><i class="fa-solid fa-paperclip"></i> View Project</a>
+        <p  >Developed a Palindrome Checker web application using HTML, CSS, and JavaScript. The tool allows users to input a word or phrase and determines whether it is a palindrome (reads the same forward and backward).</p>
+        <p  ><b>Key Features:</b><br>
+          <i class="fa-solid fa-circle-check"></i> Real-time palindrome validation with instant results<br>
+          <i class="fa-solid fa-circle-check"></i> Case-insensitive and space-agnostic checking<br>
+          <i class="fa-solid fa-circle-check"></i> User-friendly interface with interactive design <br>
+          <i class="fa-solid fa-circle-check"></i> Responsive layout for seamless usability across devices</p>
+      </ul>
+    </div>
+    <!--	/Educational details-->
+    <div class="container-fluid text-left" >
+      <div class="row align-items-center">
+        <div class="sectiontitle text-primary p-0" id="education">Education</div>
+        <div class="col p-1">
+          <hr class="hr p-0 m-0">
+        </div>
+      </div>
+      <div id="graduation">
+        <p>Terna Engineering College | Navi Mumbai </p>
+        <p><b>Bachelor of Engineering </b>in Mechanical</p>
+        <p><i>2019</i></p>
+      </div>
+      <div id="HSC">
+        <p>Dnyansadhana college | Thane </p>
+        <p><b>HSC </b>in Science</p>
+        <p><i>2015</i></p>
+      </div>
+      <div id="SSC">
+        <p>Shreeram Vidyalaya | Airoli, Navi Mumbai </p>
+        <p><b>SSC </b>in Semi Medium</p>
+        <p><i>2013</i></p>
+      </div>
+    </div>
+    <!--	certification added-->
+    <div class="container-fluid text-left py-2" >
+      <div class="row align-items-center">
+        <div class="sectiontitle text-primary p-0" id="Certifications">Certifications</div>
+        <div class="col p-1">
+          <hr class="hr p-0 m-0">
+        </div>
+      </div>
+      <ul class="px-lg-3 px-3 p-0 m-0">
+        <li>Completed frontend developer and responsive web developer course from FreeCode camp</li>
+        <li>Award winner for the best employee of the month November</li>
+        <li>completed manual and automation course from SIT computers</li>
+      </ul>
+    </div>
+    <!--	adding hobbies-->
+    <div class="container-fluid text-left py-2" >
+      <div class="row align-items-center">
+        <div class="sectiontitle text-primary p-0" id="hobbies">Hobbies and Interests</div>
+        <div class="col p-1">
+          <hr class="hr p-0 m-0">
+        </div>
+      </div>
+      <ul class="px-lg-3 px-3 p-0">
+        <li>Painting (specifically warli and cloth painting)</li>
+        <li>Dancing</li>
+      </ul>
+    </div>
+  </div>
+	
+	
+  <!--	adding download button-->
+  
+  <button id="download">Download as PDF</button>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
 document.getElementById("download").addEventListener("click", function () {
     const { jsPDF } = window.jspdf;
@@ -952,5 +313,11 @@ document.getElementById("download").addEventListener("click", function () {
     });
 });
 </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
 </body>
 </html>
